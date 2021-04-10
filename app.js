@@ -17,6 +17,8 @@ const Tenor = require("tenorjs").client({
    "Locale": "en_US", // Your locale here, case-sensitivity depends on input
   })
 
+app.use(express.static('public'));
+
 // Routes
 app.get('/', (req, res) => {
     // Handle the home page when we haven't queried yet
